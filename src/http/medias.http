@@ -1,0 +1,33 @@
+# baseURL
+@baseURL = http://localhost:3000
+
+###
+# Find All Medias
+GET {{ baseURL }}/medias
+
+###
+# Find Media By Id
+GET {{ baseURL }}/medias/1
+
+###
+# Create medias
+POST {{ baseURL }}/medias
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+    "password": "password"
+}
+
+###
+# Update media By Id
+PUT {{ baseURL }}/medias/1
+Content-Type: application/json
+{
+    "email": "example@email.com",
+    "password": "password"
+}
+
+###
+# Delete Media By Id
+DELETE {{ baseURL }}/medias/1
